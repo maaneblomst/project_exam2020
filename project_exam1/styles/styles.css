@@ -1,0 +1,459 @@
+/*PROJECT EXAM 1 - FUTUREMARTIAN.COM
+  AUTHOR: TONJE HOLM (FEU OCT19)*/
+/*Credits: Unicode characters from: https://unicode-table.com/en/*/
+/*Images from https://unsplash.com and https://www.nasa.gov/multimedia/imagegallery/index.html*/
+
+/*GLOBAL STYLES*/
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  background-color: #000;
+  padding: 0;
+  margin: 0 auto;
+}
+body {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 95%;
+  min-height: 100%;
+  line-height: 1.2em;
+  font-size: 1.2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2em;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+  padding: 10px;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 15px;
+}
+h3 {
+  margin-bottom: 5px;
+  margin: 15px;
+}
+.hide {
+  display: none;
+}
+img {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+a {
+  text-decoration: none;
+  color: #33ccff;
+}
+p {
+  margin-bottom: 1.5em;
+  padding: 5px;
+}
+blockquote {
+  margin: 1em;
+}
+
+a:visited {
+  color: #33ccff;
+}
+a.button-top {
+  display: block;
+  border: 1px solid #33ccff;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.bolded {
+  display: block;
+  font-weight: 800;
+}
+.orange-font {
+  color: #ff6633;
+  margin-bottom: 0px;
+  margin: 0px;
+}
+blockquote {
+  padding: 5px;
+}
+.read-more {
+  display: inline-block;
+  padding-left: 25px;
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+/*HEADER STYLES*/
+.logo img {
+  width: 100%;
+  margin-left: 1em;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+/*NAVIGATION STYLES*/
+/*To get a hamburger menu, I got a lot of guidance from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp,
+I explain the concept in the js-file.*/
+.top-nav {
+  overflow: hidden;
+  font-family: orbitron, sans-serif;
+}
+.top-nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.top-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.top-nav a.active {
+  background-color: #33ccff;
+  color: white;
+}
+.top-nav .icon {
+  display: none;
+  border: 1px solid #fff;
+}
+/*LAYOUT STYLES*/
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 0;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  padding: 1%;
+}
+/*HOME PAGE*/
+.hero-image {
+  background-image: url("../images/home/hero-image.jpg");
+  height: 509px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+.hero-container {
+  display: block;
+  position: relative;
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+}
+.hero-text h1 {
+  margin: 0em 2em 0em 2em;
+  padding: 0;
+}
+.hero-text {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(5, 4, 4, 0.8);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+a.button-hero {
+  display: block;
+  font-size: 1em;
+  border: 2px solid #ff6633;
+  color: #fff;
+  padding: 10px 40px 10px 40px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0.2em;
+  font-weight: 700;
+}
+.button-hero:visited {
+  color: #fff;
+}
+/*LIVING IN SPACE*/
+/*I learned to make collapsibles from https://www.w3schools.com/howto/howto_js_collapsible.asp, I explain the concept in the script.js-file.*/
+.collapsible {
+  background-color: #000;
+  color: #fff;
+  font-family: orbitron, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+}
+.active,
+.collapsible:hover {
+  border: 1px solid #33ccff;
+  color: #33ccff;
+}
+.collapsible-content {
+  display: none;
+  overflow: hidden;
+}
+.collapsible:after {
+  content: "\1401";
+  font-size: 13px;
+  color: #fff;
+  float: right;
+  margin-left: 5px;
+}
+.active:after {
+  content: "\140A";
+  color: #33ccff;
+}
+
+/*LIVING IN SPACE - LIVING CONDITIONS*/
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  height: 400px;
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  scroll-behavior: none;
+}
+/*UPCOMING LAUNCHES*/
+.signup-style a {
+  color: #33ccff;
+}
+.signup-style:visited {
+  color: #33ccff;
+}
+table {
+  display: block;
+}
+table th {
+  font-family: orbitron, sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+#launch-name,
+#launch-date {
+  font-weight: 700;
+}
+#launch-desc {
+  font-size: 0.7em;
+  padding: 20px;
+}
+/*SIGN UP - FORM*/
+fieldset {
+  border: none;
+  font-size: 1.2em;
+}
+.formContainer {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+.form-image {
+  background-image: url("../images/launches/rocket_two.jpg");
+  min-height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+td {
+  padding: 10px;
+}
+td#launch-name {
+  font-size: 1em;
+}
+td#launch-details {
+  text-decoration: underline;
+}
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+input[type="text"]:focus,
+input[type="email"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.submit {
+  background-color: #33ccff;
+  color: #fff;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.form-error {
+  display: none;
+}
+.form-valid {
+  font-size: 2em;
+  font-family: orbitron, sans-serif;
+  display: block;
+  padding: 1em;
+  line-height: 1.2em;
+}
+/*LAUNCH DETAILS*/
+.launch-detail-text {
+  margin-bottom: 5px;
+  margin: 15px;
+}
+/*FOOTER STYLES*/
+footer {
+  bottom: 0;
+}
+footer nav a,
+.footer-text {
+  display: block;
+  font-size: 1em;
+  padding: 5px;
+}
+footer nav a:hover {
+  color: #fff;
+}
+#lets-talk {
+  font-size: 2em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-family: orbitron, sans-serif;
+}
+#copyright {
+  font-size: 0.5em;
+}
+/*NAVIGATION FOR MOBILE*/
+/*Credit: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
+@media screen and (max-width: 699px) {
+  .top-nav a:not(:first-child) {
+    display: none;
+  }
+  .top-nav a.icon {
+    float: right;
+    display: block;
+  }
+  .top-nav.responsive {
+    position: relative;
+  }
+  .top-nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .top-nav.responsive a {
+    float: none;
+    display: block;
+  }
+}
+/*Desktop and large tablet styles*/
+@media screen and (min-width: 769px) {
+  /*DESKTOP - GLOBAL STYLES*/
+  body {
+    width: 100%;
+    font-size: 1em;
+  }
+  .minimize {
+    width: 40%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .column {
+    flex: 1;
+  }
+  .large {
+    flex: 3;
+  }
+  .logo img {
+    width: 30%;
+    margin-left: 1em;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+  a.button-top {
+    border: none;
+    text-align: center;
+    margin-top: 10em;
+    float: left;
+  }
+  a.button-top:hover {
+    border: 2px solid #33ccff;
+  }
+  /*DESKTOP - HOMEPAGE*/
+  .hero-image {
+    width: 100%;
+    height: 562px;
+  }
+  #planet-mars {
+    width: 30%;
+    float: right;
+    margin: 0em 2em 2em 2em;
+    overflow: hidden;
+  }
+  /*DESKTOP - LIVING IN SPACE*/
+  #astronaut {
+    width: 98%;
+  }
+  .intro-living {
+    width: 100%;
+  }
+  .iframe {
+    width: 70%;
+    height: 100px;
+  }
+  .submit:hover {
+    border: 2px solid #fff;
+    font-size: 0.6em;
+  }
+  .submit:active {
+    background-color: #fff;
+  }
+  /*DESKTOP - LAUNCHES*/
+  /*FOOTER STYLES*/
+  footer nav a,
+  .footer-text {
+    display: block;
+    font-size: 0.7em;
+  }
+}

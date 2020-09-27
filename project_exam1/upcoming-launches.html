@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Tonje Holm">
+    <meta name="description"
+        content="Are you a future Martian? Check out the next launches from SpaceX, and make sure you don't miss out on future history being made!">
+    <meta name="keywords"
+        content="nasa, spacex, launch, rockets, rocketship, martian, future, Mars, planet, living in Space">
+    <title>futureMartian – Upcoming Launches</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a id="top"></a>
+        <a class="logo" href="index.html"> <img src="images/home/logo.png"
+                alt="Future Martian's logo. Click to enter homepage."></a>
+        <nav class="top-nav">
+            <a href="index.html">Home</a>
+            <a href="livingspace.html">Living in space</a>
+            <a class="active" href="upcoming-launches.html">Upcoming Launches</a>
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()"><i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="row">
+                <div class="column large">
+                    <h1>Upcoming Launches</h1>
+                    <p>Check out SpaceX's scheduled upcoming launches, and <a class="signup-style"
+                            href="#signup-form">sign
+                            up</a> so we can send you a notification before it happens.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="launch-date">Date</th>
+                                <th id="launch-name">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody class="launch-container">
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                    </table>
+                    <span class="read-more"><a href="https://www.spacex.com"> > Visit SpaceX and read more about
+                            upcoming launches</a>
+                        </p>
+                </div>
+                <div class="column">
+                    <img id="rocket-one" src="images/launches/rocket_one.png" alt="a rocket launching into the sky.">
+                </div>
+            </div>
+        </section>
+        <section class="row container">
+            <div class="column spacemaker"></div>
+            <div class="column large">
+                <div class="form-image">
+                    <a id="signup-form"></a>
+                    <h2>Don't miss out!</h2>
+                    <p>Sign up and get a notification in good time before the next SpaceX launch!<br>
+                        Please fill in your information below and hit submit.</p>
+                    <form id="formContainer">
+                        <fieldset>
+                            <label>
+                                Name:
+                                <input type="text" name="name">
+                                <span class="form-error" id="nameError">Please enter your name</span>
+                            </label>
+                            <br>
+                            <label>
+                                E-mail:
+                                <input type="email" name="email">
+                                <span class="form-error" id="emailError">Please enter your email address</span>
+                                <span class="form-error" id="invalidEmailError">Please enter a valid email address
+                                </span>
+                            </label>
+                            <br>
+                            <input class="submit" type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="column spacemaker">
+            </div>
+        </section>
+    </main>
+    <a class="button-top" href="#top">TOP</a>
+    <footer>
+        <div class="row">
+            <div class="column">
+                <div class="footer-text">
+                    <span id="lets-talk">Let's talk</span>
+                    <a id="mail" href="mailto:hello@futuremartian.com">hello@futuremartian.com</a>
+                </div>
+                <span id="copyright">© futureMartian 2020</span>
+            </div>
+            <div class="column spacemaker"></div>
+            <div class="column spacemaker"></div>
+            <div class="column spacemaker"></div>
+            <div class="column">
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="livingspace.html">Living in space</a>
+                    <a href="upcoming-launches.html">Upcoming Launches</a>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="js/launches.js"></script>
+    <script src="js/form-validation.js"></script>
+</body>
+
+</html>
